@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lawson Olanrewaju - Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); </style><style> @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon"  type="image/png" href="img/logo.png">
 </head>
 <body>
     <div id="header">
@@ -14,7 +18,7 @@
                 <img src="img/logo.png" alt="logo" class="logo" width="100px" height="100px">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
@@ -40,19 +44,45 @@
                         I am a highly motivated and skilled professional with a passion for developing innovative software solutions. With several years of experience in the industry, I have worked on a diverse range of projects, ranging from small-scale applications to large-scale enterprise systems
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('languages')">Languages</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Web Development</span><br>Web App Development</li>
                             <li><span>App Development</span><br>Building Andriod Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="languages">
+                        <ul>
+                            <li><span>Programming Language</span><br>Python <br> JavaScript<br> JAVA</li>
+                            <li><span>Query Language</span><br>SQL</li>
+                            <li><span>Mark Up Language</span><br>HTML</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>Freelancer</li>
+                            <li><span>2021 - 2022</span><br>Web Developer & HTML/CSS tutor Internship At LCA</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>Honors Diploma in Information & Technology (Software Engineering) From NIIT </li>
+                            <li><span>2022</span><br>Advanced Certificate in Information & Technology(Software Engineering) From NIIT</li>
+                            <li><span>2020</span><br>Diploma in Information & Technology From LCA</li>
+                            <li><span>2019</span><br>OND Office Technology & Mgt From YabaTech</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<!-- --------------------Services---------------------- -->
+
+
+    <script src="main.js"></script>
 </body>
 </html>

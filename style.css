@@ -126,6 +126,7 @@ nav ul li a:hover::after{
 
 .sub-title{
     font-size: 60px;
+    /* margin: 5px 0; */
     font-weight: 600;
     color: var(--white);
 }
@@ -160,3 +161,21 @@ nav ul li a:hover::after{
 /* .tab-links:hover::after{
     width: 100%;
 } */
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: var(--cyan);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
