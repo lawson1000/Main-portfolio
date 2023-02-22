@@ -183,7 +183,6 @@ nav ul li a:hover::after{
 
 /* -------------------- Services --------------------- */
 
-
 #services{
     padding: 30px 0;
     background-image: url(img/SERVICES-SECTION-BACKGROUND.jpg);
@@ -195,15 +194,6 @@ nav ul li a:hover::after{
 
 }
 
-/* #services::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0);
-} */
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -244,4 +234,91 @@ nav ul li a:hover::after{
 .services-list div:hover{
     background: var(--red);
     transform: translateY(-10px);
+}
+
+/* -------------- portfolio -------------- */
+
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;   
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6),var(--red));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom:20px ;
+}
+
+.layer a{
+    margin-top: 20px;
+    color: var(--red);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.06);
+}
+.work:hover .layer{
+    height: 100%;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid var(--red);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    background-color: var(--white);
+    transition: all 0.5s;
+    color: var(--black);
+}
+
+.btn:hover{
+    background-color: var(--red);
+    color: var(--white);
 }
