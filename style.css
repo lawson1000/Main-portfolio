@@ -460,15 +460,17 @@ nav .fas{
         flex-basis: 100%;
     }
     .contact-left p{
-        font-size: 16px;
+        font-size: 14.5px;
     }
 
     .contact-left p a{
         color: var(--white);
+        text-decoration: none;
+        /* there's no anchor tag in the html but the browser detect it as an a link in mobile because it a number  */
     }
 
     .contact-left p i{
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .copyright{
