@@ -460,11 +460,15 @@ nav .fas{
         flex-basis: 100%;
     }
     .contact-left p{
-        font-size: 14px;
+        font-size: 16px;
+    }
+
+    .contact-left p a{
         color: var(--white);
     }
+
     .contact-left p i{
-        font-size: 12px;
+        font-size: 14px;
     }
     
     .copyright{
