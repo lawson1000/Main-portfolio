@@ -25,7 +25,14 @@ function closeMenu(){
     sideMenu.style.right= "-200px";
 }
 
-
+const toTop = document.querySelector(".to-top")
+    window.addEventListener("scroll", () =>{
+        if(window.pageYOffset > 100){
+            toTop.classList.add("press")
+        } else{
+            toTop.classList.remove("press")
+        }
+    })
 
 
   form.addEventListener('submit', e => {
@@ -61,8 +68,9 @@ function closeMenu(){
       .then(response => {
         submitMsg.innerHTML = "Message Sent Successfully"
         setTimeout(function(){
-            submitMsg.innerHTML ="";
-        })
+            submitMsg.innerHTML =""
+        },5000);
+        form.reset();
       })
       .catch(error => console.error('Error!', error.message))
     }
