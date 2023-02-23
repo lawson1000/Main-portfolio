@@ -17,13 +17,15 @@
         <div class="container">
             <nav>
                 <img src="img/logo.png" alt="logo" class="logo" width="100px" height="100px">
-                <ul>
+                <ul id="sideMenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times clo" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fas fa-bars clo" onclick="openMenu()"></i>      
             </nav>
             <div class="header-text">
                 <p>Software Engineer</p>
@@ -140,11 +142,41 @@
                         <a href="#"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                
             </div>
             <a href="#" class="btn">See More</a>
         </div>
     </div>
+<!-- -------------------Contact ----------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> Lawsonolanrewaju@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>+2348137227639</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="document/Lanre Lawson newest CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="text" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright &copy; Lawson || All Right Reserved.</p>
+    </div>
+</div>
 
     <script src="main.js"></script>
 </body>
