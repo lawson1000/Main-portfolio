@@ -94,16 +94,14 @@ const toTop = document.querySelector(".to-top")
       .then(response => {
         submitMsg.innerHTML = "Message Sent Successfully"
         submitMsg.style.color="green";
-        setTimeout();
+         // TimeOut for the submitMsg
+        setTimeout(function(){
+            submitMsg.innerHTML =""
+        },5000);
         form.reset();
       })
       .catch(error => console.error('Error!', error.message))
     })
-
-    // TimeOut for the submitMsg
-    setTimeout(function(){
-        submitMsg.innerHTML =""
-    },5000);
 
 
 // typing animation 
