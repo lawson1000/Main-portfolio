@@ -7,6 +7,7 @@ const submitMsg = document.querySelector("#submitMsg");
 const Fname= document.querySelector("#name");
 const Femail= document.querySelector("#email");
 const Fmessage= document.querySelector("#message");
+
 function opentab(tabname){
     for(tabLink of tabLinks){
         tabLink.classList.remove('active-link');
@@ -115,3 +116,5 @@ let typed = new Typed(".typing",{
     backSpeed:60,
     loop:true
 })  
+
+
