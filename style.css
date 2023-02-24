@@ -392,8 +392,9 @@ form .btn2{
     margin-top: 20px;
 }
 
-#msg{
-    color: #61b752;
+#submitMsg{
+    color: var(--red);
+    /* color: #61b752; */
     margin-top: -40px;
     display: block;
 }

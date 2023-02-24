@@ -36,49 +36,79 @@ const toTop = document.querySelector(".to-top")
 
 
   form.addEventListener('submit', e => {
-    e.preventDefault()
     let nameValidate = /^[a-z A-Z]+$/;
     let emailValidate= /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let messageValidate = /[a-zA-Z]/g || []
+
     let userName = Fname.value.trim();
     let userEmail = Femail.value.trim();
     let userMessage = Fmessage.value.trim();
 
-    if (!nameValidate.test(userName)) {
+    submitMsg.style.color="var(--red)";
+    
+    if(userName === ""){
         e.preventDefault();
-        alert("Please enter only letters.");
-        return;
-    }
-    else if(userName.length <3){
-        e.preventDefault();
-        alert("Name must be more than 3 characters");
+        submitMsg.innerHTML = "Name can not be empty"
+        setTimeout();
         return
     }
-    else if(!emailValidate.test(userEmail)){
+    else{ 
+        if (!nameValidate.test(userName)) {
+            e.preventDefault();
+            submitMsg.innerHTML = "Name must contain only letters."
+            setTimeout();
+            return;
+        }
+        else if(userName.length <3){
+            e.preventDefault();
+            submitMsg.innerHTML = "Name must be more than 3 letters"
+            setTimeout();
+            return;
+        }
+        else{
+            submitMsg.innerHTML = ""
+    }
+}
+    if(!emailValidate.test(userEmail)){
         e.preventDefault();
-        alert("Please enter a valid Email address");
+        submitMsg.innerHTML = "Please enter a valid Email address"
+        setTimeout();
         return;
+    }else{
+        submitMsg.innerHTML ="";
     }
-    else if(userMessage.length <= 10){
+
+    if(userMessage.match(messageValidate).length < 10){
         e.preventDefault();
-        alert("Message must be more than 10 characters");
-        return
-    }
+        submitMsg.innerHTML = "Message must contain at least 10 letters"
+        setTimeout();
+        return;
+    }    
     else{
+        submitMsg.innerHTML ="";
+}
+    e.preventDefault()
+    submitMsg.innerHTML = "Loading...";
+    submitMsg.style.color="yellow";
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
         submitMsg.innerHTML = "Message Sent Successfully"
-        setTimeout(function(){
-            submitMsg.innerHTML =""
-        },5000);
+        submitMsg.style.color="green";
+        setTimeout();
         form.reset();
       })
       .catch(error => console.error('Error!', error.message))
-    }
-  })
+    })
+
+    // TimeOut for the submitMsg
+    setTimeout(function(){
+        submitMsg.innerHTML =""
+    },5000);
+
 
 // typing animation 
 let typed = new Typed(".typing",{
-    strings: ["Software Engineer","Web Developer","Full Stack Developer","Freelancer"],
+    strings: ["Software Engineer","Web Developer","Full St ack Developer","Freelancer"],
     typeSpeed:100,
     backSpeed:60,
     loop:true
