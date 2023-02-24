@@ -118,8 +118,8 @@ let typed = new Typed(".typing",{
 })  
 
 
-// Adeife Adams--------------
-// scroll effect
+
+// scroll effect //Animation start from viewport
 const scrollElements = document.querySelectorAll(".js-scroll");
 
 const elementInView = (el, dividend = 1) => {
