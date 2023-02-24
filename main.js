@@ -49,20 +49,20 @@ const toTop = document.querySelector(".to-top")
     if(userName === ""){
         e.preventDefault();
         submitMsg.innerHTML = "Name can not be empty"
-        setTimeout();
+        clearMsg();
         return
     }
     else{ 
         if (!nameValidate.test(userName)) {
             e.preventDefault();
             submitMsg.innerHTML = "Name must contain only letters."
-            setTimeout();
+            clearMsg();
             return;
         }
         else if(userName.length <3){
             e.preventDefault();
             submitMsg.innerHTML = "Name must be more than 3 letters"
-            setTimeout();
+            clearMsg();
             return;
         }
         else{
@@ -72,7 +72,7 @@ const toTop = document.querySelector(".to-top")
     if(!emailValidate.test(userEmail)){
         e.preventDefault();
         submitMsg.innerHTML = "Please enter a valid Email address"
-        setTimeout();
+        clearMsg();
         return;
     }else{
         submitMsg.innerHTML ="";
@@ -81,7 +81,7 @@ const toTop = document.querySelector(".to-top")
     if(userMessage.match(messageValidate).length < 10){
         e.preventDefault();
         submitMsg.innerHTML = "Message must contain at least 10 letters"
-        setTimeout();
+        clearMsg();
         return;
     }    
     else{
@@ -100,13 +100,17 @@ const toTop = document.querySelector(".to-top")
         },5000);
         form.reset();
       })
-      .catch(error => console.error('Error!', error.message))
+      .catch(error => submitMsg.innerHTML ="Please Check your internet and Try again!")
     })
 
+    // Time out clear msg
+    const clearMsg = () => setTimeout(() => {
+        submitMsg.innerHTML = "";
+      }, 5000);
 
 // typing animation 
 let typed = new Typed(".typing",{
-    strings: ["Software Engineer","Web Developer","Full St ack Developer","Freelancer"],
+    strings: ["Software Engineer","Web Developer","Full Stack Developer","Freelancer"],
     typeSpeed:100,
     backSpeed:60,
     loop:true
