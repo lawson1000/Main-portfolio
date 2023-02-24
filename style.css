@@ -486,7 +486,7 @@ nav .fas{
 /* To top button */
 
 .to-top{
-    background: white;
+    background: var(--cyan);
     position: fixed;
     bottom: 16px;
     right: 32px;
@@ -518,7 +518,7 @@ nav .fas{
     height: 50px;
     width: 50px;
     position: absolute;
-    left: 50%;
+    left: 45%;
     bottom: 20px;
     cursor: pointer;
     border-radius: 50px;
