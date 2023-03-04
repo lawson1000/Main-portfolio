@@ -149,9 +149,6 @@ nav ul li a:hover::after{
 .tab-links.active-link::after{
     width: 50%;
 }
-/* .tab-links:hover::after{
-    width: 100%;
-} */
 
 .tab-contents ul li{
     list-style: none;
@@ -466,6 +463,10 @@ nav .fas{
     }
     .contact-left, .contact-right{
         flex-basis: 100%;
+    }
+    
+    .contact-left{
+        margin-bottom: 30px;
     }
     .contact-left p{
         font-size: 14.5px;
