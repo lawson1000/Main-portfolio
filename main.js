@@ -8,6 +8,14 @@ const Fname= document.querySelector("#name");
 const Femail= document.querySelector("#email");
 const Fmessage= document.querySelector("#message");
 
+// preloader
+window.addEventListener('load', function() {
+  const preloader = document.querySelector('.preloader');
+  preloader.style.display = 'none';
+});
+
+
+
 function opentab(tabname){
     for(tabLink of tabLinks){
         tabLink.classList.remove('active-link');
